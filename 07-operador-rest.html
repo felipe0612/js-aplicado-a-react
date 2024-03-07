@@ -13,8 +13,9 @@
     Usamos para mesclar uma lista de argumentos/ parâmetros para uma função */
 
 
-
-    //1ª Digitação (aqui) 
+  function ordenar(...paramentos) {
+    return paramentos.sort();
+  }
 
 
 
@@ -30,7 +31,9 @@
 
 
 
-    //2ª Digitação (aqui) 
+  exibirNaTela(cursos);
+  exibirNaTela(ordenar(...cursos) );
+
 
 
 
@@ -56,7 +59,20 @@
 
 
 
-    //3ª Digitação (aqui) 
+  const testOrdena = (...parametros) => parametros.sort();
+
+  exibirNaTela( testOrdenar ('Jair', 'Larissa', 'Andrea') );
+
+  exibirNaTela( testOrdenar ('RHCP', 'Mega Death', 'Metallica', 'Rush', 'Pink Floyd') );
+
+
+
+
+
+
+
+
+
 
 
 
@@ -65,8 +81,17 @@
 
 
 
-    //4ª Digitação (aqui) 
+const somaValores = (...valores) => {
+  let total = 0;
 
+  for(let valor of valores) {
+    total += valor;
+  }
+    return total;
+}
+
+exibirNaTela( soma(10,20) );
+    exibirNaTela( soma(5, 3, 35, 55, 10,20) );+
     
 
     function exibirNaTela(texto) {
